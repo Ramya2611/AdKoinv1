@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
     tools:context=".VerifyPhoneActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:layout_gravity="center"
+            android:textColor="@color/basic_blue"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+
         android:layout_marginTop="25dp"
-        android:text="Wait for the code I sent You"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-        android:textColor="@color/colorPrimary" />
+        android:text="Enter the OTP sent to the Mobile number "
+        />
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="9629035233"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"
+        />
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -22,31 +51,80 @@
         android:layout_width="wrap_content"
         android:visibility="gone"
         android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/editTextCode"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/progressbar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:digits="0123456789"
-        android:drawablePadding="10dp"
-        android:hint="enter verification code"
-        android:inputType="phone"
-        android:maxLength="10" />
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:maxLength="6" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/change_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Change Number"
+            android:textSize="15dp"
+
+            android:textColor="@color/basic_blue"/>
+        <TextView
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:text="Resend OTP"
+            android:textSize="15dp"
+            android:textColor="@color/basic_blue"/>
+
+    </LinearLayout>
+
+
+
 
     <Button
         android:id="@+id/buttonSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextCode"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_border"
         android:text="Sign In"
+        android:layout_gravity="center"
         android:textAllCaps="false"
-        android:textColor="#cdd8f1" />
+        android:textSize="20dp"
+        android:textColor="#ffffff" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:textColor="@color/basic_blue"
+        android:textSize="20dp"
+        android:text="@string/quote"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/basic_blue"
 
-</RelativeLayout>
+        android:layout_gravity="center"
+        android:textSize="18dp"
+
+        android:text="@string/c_name"/>
+
+
+</LinearLayout>
 

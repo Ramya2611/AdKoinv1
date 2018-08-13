@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class NavActivity extends AppCompatActivity
         implements Home.OnFragmentInteractionListener, Refer.OnFragmentInteractionListener, History.OnFragmentInteractionListener {
 
-    private Button logoutbtn;
+    private ImageView logoutbtn;
 
 
     private BottomNavigationView mMainNav;
@@ -40,7 +42,7 @@ public class NavActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav);
 
-        logoutbtn = (Button) findViewById(R.id.logout);
+        logoutbtn = (ImageView) findViewById(R.id.logout);
 
         logoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override
