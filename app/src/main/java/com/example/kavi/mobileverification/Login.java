@@ -20,7 +20,8 @@ public class Login extends AppCompatActivity {
 
     Spinner spinner;
 
-    EditText editText;
+    EditText editText,Username;
+    String User;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,8 @@ public class Login extends AppCompatActivity {
 
         spinner = (Spinner) findViewById(R.id.spinnercountries);
         editText = (EditText) findViewById(R.id.no);
+        Username = (EditText) findViewById(R.id.name);
+       User= Username.getText().toString();
 
         spinner.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item, CountryData.countryareacodes));
 
